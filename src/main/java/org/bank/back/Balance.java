@@ -1,5 +1,6 @@
 package org.bank.back;
 import java.util.HashMap;
+import java.util.Map;
 public class Balance {
     protected static HashMap<String, Integer> balance = new HashMap<>();
 
@@ -11,4 +12,5 @@ public class Balance {
             return balance.get(name);
         }
     }
+
 }
