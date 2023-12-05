@@ -16,7 +16,7 @@ import java.util.Map;
 public class WorkWithJSON {
 
     static String path = "file.json";
-    static Map<String, Integer> loadBalanceFromJson() {
+    public static Map<String, Integer> loadBalanceFromJson() {
         String filePath = path;
         Map<String, Integer> map = new HashMap<>();
 
