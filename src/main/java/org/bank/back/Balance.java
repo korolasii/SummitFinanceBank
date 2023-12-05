@@ -1,5 +1,6 @@
 package org.bank.back;
 import java.util.HashMap;
+import java.util.Map;
 public class Balance {
     protected static Map<String, Integer> balance = WorkWithJSON.loadBalanceFromJson();
 
