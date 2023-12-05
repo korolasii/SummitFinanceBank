@@ -1,5 +1,4 @@
 package org.bank.back;
 
-public class Person {
-
+public class Category {
 }
