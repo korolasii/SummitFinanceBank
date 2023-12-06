@@ -15,8 +15,8 @@ import java.util.Map;
 
 public class WorkWithJSON {
 
-    static String path = "file.json";
-    static Map<String, Integer> loadBalanceFromJson() {
+    static String path = "src\\main\\java\\org\\bank\\back\\file.json";
+    public static Map<String, Integer> loadBalanceFromJson() {
         String filePath = path;
         Map<String, Integer> map = new HashMap<>();
 
