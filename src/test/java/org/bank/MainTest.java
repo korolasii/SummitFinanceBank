@@ -21,6 +21,11 @@ public class MainTest {
         assertTrue(!resultMap.isEmpty());
         assertEquals(Optional.ofNullable(expected), Optional.ofNullable(resultMap.get(name)));
 
-
+        Person person1 = new Person();
+        String namePerson1 = "Antony";
+        person1.name = namePerson1;
+        int expectedPerson1 = 8000;
+        int resultPerson1 = person1.balance();
+        assertEquals(expectedPerson1, resultPerson1);
     }
 }
