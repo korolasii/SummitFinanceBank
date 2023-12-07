@@ -66,4 +66,26 @@ public class WorkWithJSON {
         return map;
     }
 
+
+    static Map<String, Integer> updateBalance(String name, int sumTransaction) {
+        Map<String, Integer> map = loadBalanceFromJson();
+
+        if (map.containsKey(name)) {
+            map.put(name, map.get(name) + sumTransaction);
+
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            String json = gson.toJson(map);
+
+            try (FileWriter writer = new FileWriter(path)) {
+                writer.write(json);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return map;
+    }
+
+
+
 }
