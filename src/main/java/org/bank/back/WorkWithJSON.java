@@ -63,7 +63,7 @@ public class WorkWithJSON {
             e.printStackTrace();
         }
 
-        return map;//
+        return map;
     }
 
 }
