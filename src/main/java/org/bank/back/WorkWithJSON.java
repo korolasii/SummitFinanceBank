@@ -97,7 +97,7 @@ public class WorkWithJSON {
             System.out.println("Person not found in the balance records.");
         }
 
-        return map.getOrDefault(name, 0);
+        return map.get(name);
     }
 
 
