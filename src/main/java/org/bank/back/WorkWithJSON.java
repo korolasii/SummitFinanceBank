@@ -71,7 +71,19 @@ public class WorkWithJSON {
         Map<String, Integer> map = loadBalanceFromJson();
 
         if (map.containsKey(name)) {
-            map.put(name, map.get(name) + sumTransaction);
+            int currentBalance = map.get(name);
+
+            if (sumTransaction < 0) {
+                int newBalance = currentBalance + sumTransaction;
+                if (newBalance < 0) {
+                    System.out.println("Transaction cannot be processed. Insufficient funds.");
+                    return currentBalance;
+                }
+
+                map.put(name, newBalance);
+            } else {
+                map.put(name, currentBalance + sumTransaction);
+            }
 
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             String json = gson.toJson(map);
@@ -81,9 +93,11 @@ public class WorkWithJSON {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else {
+            System.out.println("Person not found in the balance records.");
         }
 
-        return map.get(name);
+        return map.getOrDefault(name, 0);
     }
 
 
