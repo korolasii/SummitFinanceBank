@@ -29,8 +29,9 @@ public class MainTest {
         assertEquals(expectedPerson1, resultPerson1);
 
         WorkWithJSON updateBalance = new WorkWithJSON();
+        name = "Max";
         int sumTransaction = -2000;
-        int expectedTransaction = 0;
+        int expectedTransaction = 400;
         int resultTransaction = updateBalance.updateBalance(name, sumTransaction);
         assertEquals(expectedTransaction, resultTransaction);
     }
