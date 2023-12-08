@@ -67,7 +67,7 @@ public class WorkWithJSON {
     }
 
 
-    static Map<String, Integer> updateBalance(String name, int sumTransaction) {
+    static int updateBalance(String name, int sumTransaction) {
         Map<String, Integer> map = loadBalanceFromJson();
 
         if (map.containsKey(name)) {
@@ -83,7 +83,7 @@ public class WorkWithJSON {
             }
         }
 
-        return map;
+        return map.get(name);
     }
 
 
