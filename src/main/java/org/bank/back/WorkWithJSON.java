@@ -67,7 +67,7 @@ public class WorkWithJSON {
     }
 
 
-    static int updateBalance(String name, int sumTransaction) {
+    public static int updateBalance(String name, int sumTransaction) {
         Map<String, Integer> map = loadBalanceFromJson();
 
         if (map.containsKey(name)) {

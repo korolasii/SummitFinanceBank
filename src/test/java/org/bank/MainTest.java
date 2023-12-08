@@ -27,5 +27,11 @@ public class MainTest {
         int expectedPerson1 = 8000;
         int resultPerson1 = person1.balance();
         assertEquals(expectedPerson1, resultPerson1);
+
+        WorkWithJSON updateBalance = new WorkWithJSON();
+        int sumTransaction = -2000;
+        int expectedTransaction = 0;
+        int resultTransaction = updateBalance.updateBalance(name, sumTransaction);
+        assertEquals(expectedTransaction, resultTransaction);
     }
 }
