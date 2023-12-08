@@ -6,9 +6,11 @@ public class Transaction {
     private String sender;
     private String adress;
 
-    Transaction(String type, float amount){
+    Transaction(String type, float amount, String sender, String adress){
         this.type=type;
         this.amount=amount;
+        this.sender=sender;
+        this.adress=adress;
     }
 
     public String getType() {
